@@ -19,8 +19,9 @@ public class ConnectToSQL {
       stmt = conn.createStatement();
 
       stmt.executeUpdate("CREATE TABLE DANE (ID int, Nazwisko varchar(255), Imie varchar(50));");
-      stmt.executeUpdate("INSERT INTO DANE (ID, Nazwisko, Imie) VALUES (1, 'Moniuszko', 'Karol'), (2, 'Nowak', 'Michal'), (3, 'Kowalski', 'Jan');");
-      
+      stmt.executeUpdate("INSERT INTO DANE (ID, Nazwisko, Imie) VALUES (1, 'Moniuszko', 'Karol');");
+      stmt.executeUpdate("INSERT INTO DANE (ID, Nazwisko, Imie) VALUES (2, 'Nowak', 'Michal');");
+      stmt.executeUpdate("INSERT INTO DANE (ID, Nazwisko, Imie) VALUES (3, 'Kowalski', 'Jan');");
       ResultSet wypisz = stmt.executeQuery("SELECT * FROM DANE");
 
       while(wypisz.next()){
