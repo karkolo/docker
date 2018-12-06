@@ -1,7 +1,7 @@
 import java.sql.*;
 
 public class ConnectToSQL {
-   static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+   static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
    static final String DB_URL = "jdbc:mysql://10.0.10.3:3306/baza";
 
    static final String USER = "KMoniuszko";
@@ -10,10 +10,12 @@ public class ConnectToSQL {
    public static void main(String[] args) {
    Connection conn = null;
    Statement stmt = null;
+	   
    try{
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName(JDBC_DRIVER);
 
       System.out.println("Connecting to database...");
+      
       conn = DriverManager.getConnection(DB_URL,USER,PASS);
 
       stmt = conn.createStatement();
