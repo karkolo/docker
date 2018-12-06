@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class ConnectToSQL {
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "jdbc:mysql://db:3306/baza";
+   static final String DB_URL = "jdbc:mysql://10.0.10.3:3306/baza";
 
    static final String USER = "KMoniuszko";
    static final String PASS = "karol";
